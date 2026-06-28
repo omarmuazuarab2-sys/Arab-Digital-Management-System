@@ -1,0 +1,14 @@
+{
+  "company": "Arab Digital Installation and Maintenance",
+  "chart_of_accounts": {
+    "assets": [
+      {"code": 1000, "name": "Cash at Hand"},
+      {"code": 1200, "name": "Inventory - CCTV"}
+    ],
+    "revenue": [
+      {"code": 4000, "name": "Income - CCTV Install"},
+      {"code": 4100, "name": "Income - Solar Install"}
+    ]
+  }
+}
+
