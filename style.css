@@ -75,4 +75,21 @@ footer {
     color: #28a745;
     font-weight: bold;
     }
+ /* Smooth scrolling for navigation links */
+html {
+    scroll-behavior: smooth;
+}
+
+/* Responsive adjustment for small screens */
+@media (max-width: 600px) {
+    nav ul {
+        flex-direction: column;
+        text-align: center;
+        gap: 10px;
+    }
+    #contact {
+        width: 90%;
+        margin: 10px auto;
+    }
+        }
     
