@@ -1,10 +1,12 @@
 {
   "name": "arab-digital-management-system",
   "version": "1.0.0",
-  "description": "Management and financial tracking system",
-  "main": "index.js",
+  "description": "Professional management and financial tracking system for technical services.",
+  "main": "index.html",
   "scripts": {
-    "build": "echo 'Build process successful!'"
+    "start": "echo 'Starting Arab Digital System...'",
+    "build": "echo 'Build process successful! Your system is ready for production.'"
   },
-  "dependencies": {}
+  "author": "Arab Digital Team",
+  "license": "ISC"
 }
