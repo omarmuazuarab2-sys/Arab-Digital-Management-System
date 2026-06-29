@@ -92,4 +92,21 @@ html {
         margin: 10px auto;
     }
         }
-    
+    /* Adding button animation */
+#contact button {
+    /* Smooth transition for the scaling effect */
+    transition: transform 0.2s ease, background-color 0.3s ease;
+}
+
+#contact button:hover {
+    /* Slightly increase size when hovering */
+    transform: scale(1.05);
+    /* Ensure the button color also shifts smoothly */
+    background-color: #218838; 
+}
+
+#contact button:active {
+    /* Slightly shrink when clicked for a physical "press" feel */
+    transform: scale(0.98);
+}
+
