@@ -3,60 +3,71 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Arab Digital Management System</title>
+    <meta name="description" content="Arab Digital - Professional Installation and Maintenance Services in Gombe.">
+    <title>Arab Digital | Management & Technical Services</title>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="style.css">
 </head>
-<body>
+<body style="font-family: 'Inter', sans-serif;">
 
-    <!-- Navigation Menu -->
-    <nav>
-        <ul style="list-style: none; display: flex; gap: 20px; background: #333; padding: 15px; margin: 0;">
-            <li><a href="#top" style="color: white; text-decoration: none;">Home</a></li>
-            <li><a href="#services" style="color: white; text-decoration: none;">Services</a></li>
-            <li><a href="#contact" style="color: white; text-decoration: none;">Contact</a></li>
+    <nav aria-label="Main Navigation">
+        <ul>
+            <li><a href="#top">Home</a></li>
+            <li><a href="#services">Services</a></li>
+            <li><a href="#contact">Contact</a></li>
         </ul>
     </nav>
 
-    <!-- Header -->
     <header id="top">
-        <h1>Arab Digital Installation and Maintenance</h1>
-        <p>Official management and financial tracking system for our technical services.</p>
+        <h1>Arab Digital</h1>
+        <p>Expert Technical Solutions & Financial Management</p>
     </header>
 
-    <!-- Services Section -->
-    <section id="services">
-        <h2>Our Services</h2>
-        <ul>
-            <li><strong>CCTV & Security:</strong> Installation of High-definition CCTV Cameras, security system setup and troubleshooting.</li>
-            <li><strong>Solar Power Systems:</strong> Complete Solar Power setup (Inverters, Panels, and Batteries), installation, maintenance, and optimization.</li>
-            <li><strong>Satellite Services:</strong> Professional Satellite Dish Installation and maintenance.</li>
-            <li><strong>General Electronics:</strong> Sales and repair of all types of electronics, including Smart TVs and various household appliances.</li>
-        </ul>
-    </section>
+    <main>
+        <section id="services">
+            <h2>Our Core Services</h2>
+            <div class="service-grid">
+                <article>
+                    <h3>CCTV & Security</h3>
+                    <p>High-definition monitoring and professional security setup.</p>
+                </article>
+                <article>
+                    <h3>Solar Power</h3>
+                    <p>End-to-end Inverter and Solar panel installations.</p>
+                </article>
+                <article>
+                    <h3>Satellite TV</h3>
+                    <p>Precision dish alignment and signal maintenance.</p>
+                </article>
+            </div>
+        </section>
 
-    <!-- Contact Form Section -->
-    <section id="contact">
-        <h2>Contact Us</h2>
-        <form id="inquiryForm">
-            <label for="name">Name:</label><br>
-            <input type="text" id="name" name="name" required><br><br>
-            
-            <label for="email">Email:</label><br>
-            <input type="email" id="email" name="email" required><br><br>
-            
-            <label for="message">Your Inquiry:</label><br>
-            <textarea id="message" name="message" required></textarea><br><br>
-            
-            <button type="submit">Send Message</button>
-        </form>
-        <p id="responseMessage"></p>
-    </section>
+        <section id="contact">
+            <h2>Get in Touch</h2>
+            <form id="inquiryForm">
+                <div class="form-group">
+                    <label for="name">Full Name</label>
+                    <input type="text" id="name" name="name" placeholder="Enter your name" required>
+                </div>
+                <div class="form-group">
+                    <label for="email">Email Address</label>
+                    <input type="email" id="email" name="email" placeholder="example@mail.com" required>
+                </div>
+                <div class="form-group">
+                    <label for="message">How can we help?</label>
+                    <textarea id="message" name="message" rows="5" required></textarea>
+                </div>
+                <button type="submit">Send Message</button>
+            </form>
+            <p id="responseMessage" aria-live="polite"></p>
+        </section>
+    </main>
 
     <footer>
-        <p>For inquiries and business partnerships, contact our office in Gombe.</p>
+        <p>&copy; 2026 Arab Digital Management System | Gombe, Nigeria</p>
     </footer>
 
     <script src="script.js"></script>
 </body>
-    </html>
-    
+            </html>
+            
