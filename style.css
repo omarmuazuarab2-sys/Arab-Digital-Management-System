@@ -1,40 +1,46 @@
-/* 1. Global Variables for professional styling */
+/* 1. Global Variables */
 :root {
     --primary-color: #28a745;
     --secondary-color: #218838;
-    --dark-color: #333;
-    --light-color: #f4f4f4;
+    --dark-color: #1a1a1a;
+    --light-color: #f8f9fa;
     --white: #ffffff;
-    --shadow: 0 4px 6px rgba(0,0,0,0.1);
+    --shadow: 0 10px 20px rgba(0,0,0,0.1);
+    --transition: all 0.3s cubic-bezier(0.25, 0.8, 0.25, 1);
 }
 
 /* 2. Base Styles */
-html {
-    scroll-behavior: smooth;
-}
-
+html { scroll-behavior: smooth; }
 body {
-    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-family: 'Inter', 'Segoe UI', sans-serif;
     line-height: 1.6;
     margin: 0;
     background-color: var(--light-color);
     color: var(--dark-color);
 }
 
-/* 3. Header & Navigation */
+/* 3. Header & Navigation (Sticky & Sleek) */
 header {
     background: var(--dark-color);
     color: var(--white);
-    padding: 2rem 0;
+    padding: 3rem 1rem;
     text-align: center;
+    background: linear-gradient(135deg, #1a1a1a, #333);
+}
+
+nav {
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+    background: rgba(34, 34, 34, 0.95);
+    backdrop-filter: blur(10px); /* Tasirin gilashi */
 }
 
 nav ul {
     list-style: none;
     display: flex;
     justify-content: center;
-    gap: 30px;
-    background: #222;
+    gap: 40px;
     padding: 1rem;
     margin: 0;
 }
@@ -42,75 +48,80 @@ nav ul {
 nav a {
     color: var(--white);
     text-decoration: none;
-    font-weight: bold;
-    transition: color 0.3s;
+    font-weight: 700;
+    transition: var(--transition);
 }
 
 nav a:hover {
     color: var(--primary-color);
+    letter-spacing: 1px;
 }
 
-/* 4. Sections */
+/* 4. Sections (Modern Card UI) */
 section {
     max-width: 800px;
-    margin: 2rem auto;
-    padding: 2rem;
+    margin: 3rem auto;
+    padding: 2.5rem;
     background: var(--white);
-    border-radius: 10px;
+    border-radius: 15px;
     box-shadow: var(--shadow);
+    transition: var(--transition);
 }
 
-/* 5. Professional Form Styling */
-#contact {
-    max-width: 500px;
+section:hover {
+    box-shadow: 0 15px 30px rgba(0,0,0,0.15);
 }
 
+/* 5. Service Grid */
+.service-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 20px;
+}
+
+.service-grid article {
+    padding: 1.5rem;
+    border-left: 4px solid var(--primary-color);
+    background: var(--light-color);
+    border-radius: 5px;
+}
+
+/* 6. Advanced Form Styling */
 input, textarea {
     width: 100%;
-    padding: 12px;
+    padding: 15px;
     margin: 10px 0;
-    border: 2px solid #ddd;
-    border-radius: 6px;
-    transition: border-color 0.3s;
+    border: 2px solid #eee;
+    border-radius: 8px;
+    transition: var(--transition);
 }
 
 input:focus, textarea:focus {
     border-color: var(--primary-color);
-    outline: none;
+    box-shadow: 0 0 8px rgba(40, 167, 69, 0.2);
 }
 
 button {
     width: 100%;
-    padding: 12px;
+    padding: 15px;
     background-color: var(--primary-color);
     color: white;
     border: none;
-    border-radius: 6px;
+    border-radius: 8px;
     font-size: 18px;
+    font-weight: bold;
     cursor: pointer;
-    transition: transform 0.2s, background-color 0.3s;
+    transition: var(--transition);
 }
 
 button:hover {
-    transform: scale(1.02);
-    background-color: var(--secondary-color);
+    transform: translateY(-3px);
+    box-shadow: 0 5px 15px rgba(40, 167, 69, 0.4);
 }
 
-/* 6. Footer */
-footer {
-    text-align: center;
-    padding: 2rem;
-    color: #666;
-}
-
-/* 7. Responsive Design (Mobile First) */
+/* 7. Responsive Design */
 @media (max-width: 600px) {
-    nav ul {
-        flex-direction: column;
-        gap: 15px;
+    nav ul { gap: 15px; }
+    section { margin: 1rem; }
     }
-    section {
-        margin: 1rem;
-        padding: 1rem;
-    }
-    }
+    
