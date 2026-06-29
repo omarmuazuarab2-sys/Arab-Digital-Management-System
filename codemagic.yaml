@@ -4,13 +4,9 @@ workflows:
     max_build_duration: 60
     environment:
       groups:
-        - ARAB  # Wannan rukunin da ka ƙirƙira a Codemagic
+        - ARAB
       vars:
         NODE_ENV: 'production'
-    trigger:
-      branch_patterns:
-        - pattern: main
-          include: true
     scripts:
       - name: Install dependencies
         script: |
@@ -21,6 +17,4 @@ workflows:
       - name: Run security check
         script: |
           npm audit
-    artifacts:
-      - build/  # Wannan folder din da ake fitarwa bayan ginin ya kammala
-      
+          
